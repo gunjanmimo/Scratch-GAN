@@ -41,11 +41,3 @@ class Generator(nn.Module):
 
     def forward(self, x):
         return self.model(x)
-
-
-if __name__ == "__main__":
-    sample_data = torch.randn((32, 784))
-    model = Discriminator(img_dim=784)
-    pred = model(sample_data)
-    print(pred.shape)
-    print(pred.view(-1).shape)
